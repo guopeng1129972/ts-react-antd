@@ -25,3 +25,4 @@ let guopeng:Person={
 // readonly yu const 
 //readonly 用于属性上的，
 //const 多用于变量上
+

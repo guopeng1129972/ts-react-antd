@@ -6,7 +6,7 @@ let bnum:number=0b1111;
 
 let myname:string='guo peng';
 //调用定义的字符串，直接用${}
-let word:string="hello ${myname}";
+let word:string=`hello ${myname}`;
 
 
 let u:undefined =undefined;
