@@ -24,3 +24,6 @@ node script.ts
 1.如何调用定义的值，在字符串中？
 `$this.name is xxx`;
 注意，这里不是用的单引号
+
+声明文件，引入第三方库文件
+declare var jQuary:(selector:string)=>any
