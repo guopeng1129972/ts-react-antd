@@ -15,3 +15,7 @@ hook的特点
 1.完全可选
 2.百分之百向后兼容（会不会class 不影响使用不适用hook）
 3.没有计划移除react中的class
+
+hook是什么？
+什么时候会用useState Hook？
+
