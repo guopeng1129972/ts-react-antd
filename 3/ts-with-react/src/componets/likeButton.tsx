@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 //组件要用大写
 const LikeButton: React.FC = () => {
   // const [obj, setObj] = useState({like:0,on:true});
@@ -17,7 +17,8 @@ const LikeButton: React.FC = () => {
   //useState 是有泛型?
   const [like, setLike] = useState(0);
   const [on, setOn] = useState(true);
-  
+  //useEffect 就是每次函数执行完成后跟新内容（执行），直接使用就行
+  useEffect(()=>{document.title=`点击了${like}次`})
     //return 里面不能写注释
   return (<>
     <button onClick={()=>{setLike(like+1)}}>

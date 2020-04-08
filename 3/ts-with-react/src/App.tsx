@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Hello from './componets/hello';
 import LikeButton from './componets/likeButton';
+import MouseTracker from './componets/MouseTracker'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         </p>
         <Hello />
         <LikeButton/>
+        <MouseTracker/>
         <a
           className="App-link"
           href="https://reactjs.org"
