@@ -7,12 +7,14 @@ const MouseTracker:React.FC=() =>{
         console.log('inner')
         setPositions({x:e.screenX,y:e.screenY})
       }
-      document.addEventListener('mousemove',updateMouse)
+      document.addEventListener('click',updateMouse)
+      // 1.必须要清除的副作用
       return ()=>{
         console.log('remove effect',positions.y)
-        document.removeEventListener('mousemove',updateMouse)
+        document.removeEventListener('click',updateMouse)
       }
-    })
+    },[])
+    console.log('before render',positions.x)
   return(
     <>
     <p>X: {positions.x}, Y:{positions.y}</p>
