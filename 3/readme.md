@@ -19,4 +19,13 @@ hook的特点
 hook是什么？
 什么时候会用useState Hook？
 
+什么是hoc？
+higher order component
+高阶组件就是一个函数，接收一个组件作为参数，返回一个新的组件
 
+npm install axios --save
+
+hoc 有什么缺点？自定义hook有什么优点？
+返回一张图片的
+https://uploadbeta.com/api/pictures/random/
+http://lorempixel.com/1600/900
