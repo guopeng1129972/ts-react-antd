@@ -34,3 +34,10 @@ http://lorempixel.com/1600/900
 useContext解决什么样的问题？
 解决组件直接传递值，不用通过从父组件中读取state props传递，
 而是直接的引用
+
+使用hook的规则是什么？
+1.只在最顶层使用hook
+不要再循环，条件，嵌套中使用hook
+2.只在react函数中调用hook
+不要再js函数中调用hook，
+只在react函数中调用，或者自定义hook
