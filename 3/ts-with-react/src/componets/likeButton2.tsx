@@ -6,6 +6,7 @@ const LikeButton: React.FC = () => {
   const [on, setOn] = useState(true);
   const likeRef = useRef(0)
   const didMountRef = useRef(false)
+  const domRef = useRef<HTMLInputElement>(null)
   // const position = useMousePosition()
   const handAlertClick = () => {
     setTimeout(() => {
@@ -25,8 +26,15 @@ const LikeButton: React.FC = () => {
       didMountRef.current = true
     }
   })
+  useEffect(() => {
+    //初始化值为null 判断是否存在
+    if (domRef && domRef.current) {
+      domRef.current.focus()
+    }
+  })
   return (<>
     {/* <h2>X:{position.x},Y:{position.y}</h2> */}
+    <input type='text' ref={domRef} />
     <button onClick={() => { setLike(like + 1); likeRef.current++ }}>
       {like} 👍
     </button>
