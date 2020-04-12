@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import useMousePosition from '../hooks/useMousePosition'
-import useMousePositin from '../hooks/useMousePosition';
+// import useMousePosition from '../hooks/useMousePosition'
 const LikeButton: React.FC = () => {
 
   const [like, setLike] = useState(0);
   const [on, setOn] = useState(true);
   const likeRef = useRef(0)
-  const position = useMousePositin()
+  const didMountRef = useRef(false)
+  // const position = useMousePosition()
   const handAlertClick = () => {
     setTimeout(() => {
       alert('you click on' + likeRef.current)
@@ -17,8 +17,16 @@ const LikeButton: React.FC = () => {
     console.log('document title effect is ranning')
     document.title = `点击了${like}次`
   }, [like])
+
+  useEffect(() => {
+    if (didMountRef.current) {
+      console.log('this is updated')
+    } else {
+      didMountRef.current = true
+    }
+  })
   return (<>
-    <h2>X:{position.x},Y:{position.y}</h2>
+    {/* <h2>X:{position.x},Y:{position.y}</h2> */}
     <button onClick={() => { setLike(like + 1); likeRef.current++ }}>
       {like} 👍
     </button>
