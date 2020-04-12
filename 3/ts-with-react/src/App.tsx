@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Hello from './componets/hello';
 import LikeButton from './componets/likeButton';
+import LikeButton2 from './componets/likeButton2';
 import MouseTracker from './componets/MouseTracker'
 import useMousePosition from './hooks/useMousePosition'
 import useMousePositin from './hooks/useMousePosition';
@@ -16,7 +17,7 @@ interface IShowResult {
 const App: React.FC = () => {
   const [show, setShow] = useState(true)
   const positions = useMousePositin()
-  const [data, loading] = useURLLoader('https://uploadbeta.com/api/pictures/random/', [setShow])
+  const [data, loading] = useURLLoader('https://uploadbeta.com/api/pictures/random/', [show])
   const dogResult = data as IShowResult;
   return (
     <div className="App">
@@ -31,7 +32,7 @@ const App: React.FC = () => {
         {/* <img src='https://uploadbeta.com/api/pictures/random/' /> */}
         <Hello />
         <p>X: {positions.x}, Y:{positions.y}</p>
-        <LikeButton />
+        <LikeButton2 />
         {/* {show && <MouseTracker/>} */}
 
         <a
