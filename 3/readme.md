@@ -29,3 +29,8 @@ hoc 有什么缺点？自定义hook有什么优点？
 返回一张图片的
 https://uploadbeta.com/api/pictures/random/
 http://lorempixel.com/1600/900
+
+
+useContext解决什么样的问题？
+解决组件直接传递值，不用通过从父组件中读取state props传递，
+而是直接的引用

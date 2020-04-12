@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 // import useMousePosition from '../hooks/useMousePosition'
+import { ThemesContext } from "../App";
 const LikeButton: React.FC = () => {
 
   const [like, setLike] = useState(0);
@@ -8,6 +9,13 @@ const LikeButton: React.FC = () => {
   const didMountRef = useRef(false)
   const domRef = useRef<HTMLInputElement>(null)
   // const position = useMousePosition()
+  const theme = useContext(ThemesContext)
+  // console.log(theme);
+  // {color: "#000", background: "#eee"}
+  const style = {
+    background: theme.background,
+    color: theme.color
+  }
   const handAlertClick = () => {
     setTimeout(() => {
       alert('you click on' + likeRef.current)
@@ -35,7 +43,7 @@ const LikeButton: React.FC = () => {
   return (<>
     {/* <h2>X:{position.x},Y:{position.y}</h2> */}
     <input type='text' ref={domRef} />
-    <button onClick={() => { setLike(like + 1); likeRef.current++ }}>
+    <button style={style} onClick={() => { setLike(like + 1); likeRef.current++ }}>
       {like} 👍
     </button>
     <button onClick={handAlertClick}>alert!</button>
