@@ -11,6 +11,8 @@ scss中定义文件的下划线的意思是告诉scss，
 This usually happens because your environment has changed since running `npm install`.
 Run `npm rebuild node-sass` to download the binding for your current environment.
 ****************
+npm install classnames --save
+npm @types/install classnames --save
 ****************
 ****************
 auto rename Tag
