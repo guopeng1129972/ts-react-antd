@@ -6,19 +6,12 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <Button >Hello1</Button>
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello2</Button>
-        <Button btnType={ButtonType.Link} href={'www.baidu.com'} disabled>Hello3</Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Large Primary</Button>
+        <Button btnType={ButtonType.Defult} size={ButtonSize.Large}>Large Defult</Button>
+        <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>small danger</Button>
+        <Button btnType={ButtonType.Link} href={'www.baidu.com'} disabled>disabled link</Button>
+        <Button btnType={ButtonType.Link} href={'www.baidu.com'} >link</Button>
+
       </header>
     </div>
   );
