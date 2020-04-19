@@ -1,5 +1,6 @@
-import React from "react";
-import className from 'classnames';
+import React, { HtmlHTMLAttributes } from "react";
+import classNames from 'classnames';
+import { type } from "os";
 export enum ButtonSize {
   Large = 'lg',
   Small = 'sm'
@@ -22,18 +23,24 @@ interface BaseButtonProps {
   //children: React.ReactNode Button用了FC的类型已经包含children属性了
   //用了FC类型，props会获得children属性，
   children: React.ReactNode;
+
 }
 
-const Button: React.FC<BaseButtonProps> = (props) => {
+type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>;
+type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>;
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+const Button: React.FC<ButtonProps> = (props) => {
   const {
     btnType,
+    className,
     disabled,
     size,
     href,
-    children
+    children,
+    ...resProps
   } = props
 
-  const classes = className('btn', {
+  const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
     'disabled': (btnType === ButtonType.Link) && disabled
@@ -42,15 +49,18 @@ const Button: React.FC<BaseButtonProps> = (props) => {
   if (btnType === 'link' && href) {
     return (
       <a
+        {...resProps}
         className={classes}
         href={href}
       >
         {children}
+
       </a>
     )
   } else {
     return (
       <button
+        {...resProps}
         className={classes}
         disabled={disabled}
       >{children}</button>
