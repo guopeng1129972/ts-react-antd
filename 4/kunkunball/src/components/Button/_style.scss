@@ -9,12 +9,10 @@
   vertical-align  : middle;
   background-image: none;
   border          : $btn-border-width solid transparent;
-  padding         : $btn-padding-y $btn-padding-x;
-  font-size       : $btn-font-size;
-  border-radius   : $border-radius;
-  box-shadow      : $btn-box-shadow;
-  cursor          : pointer;
-  transition      : $btn-transition;
+  @include button-size ($btn-padding-x, $btn-padding-y, $btn-font-size, $btn-border-radius);
+  box-shadow: $btn-box-shadow;
+  cursor    : pointer;
+  transition: $btn-transition;
 
   &.disabled,
   &[disabled] {
@@ -26,4 +24,28 @@
       pointer-events: none;
     }
   }
+}
+
+.btn-lg {
+  @include button-size ($btn-padding-x-lg, $btn-padding-y-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size ($btn-padding-x-sm, $btn-padding-y-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+.btn-primary {
+  @include button-style($primary, $primary, $white)
+}
+
+.btn-danger {
+  @include button-style($danger, $danger, $white)
+}
+
+.btn-defult {
+  @include button-style($white, $gray-400, $body-color, $white, $primary, $primary)
+}
+
+.btn-link {
+  @include button-style($danger, $danger, $white)
 }

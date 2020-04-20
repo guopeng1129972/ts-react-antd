@@ -1,6 +1,5 @@
-import React, { HtmlHTMLAttributes } from "react";
+import React from "react";
 import classNames from 'classnames';
-import { type } from "os";
 export enum ButtonSize {
   Large = 'lg',
   Small = 'sm'
@@ -9,7 +8,7 @@ export enum ButtonSize {
 export enum ButtonType {
   Primary = 'primary',
   Defult = 'defult',
-  Danger = 'denger',
+  Danger = 'danger',
   Link = 'link'
 }
 
