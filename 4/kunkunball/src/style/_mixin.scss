@@ -4,6 +4,14 @@
   border-raduis: $border-raduis;
 }
 
+@mixin alt-size ($padding-x, $padding-y, $font-size, $border-raduis, $width, $height) {
+  padding      : $padding-y, $padding-x;
+  width        : $width;
+  height       : $height;
+  font-size    : $font-size;
+  border-raduis: $border-raduis;
+}
+
 @mixin button-style ($background,
   $border,
   $color,
@@ -32,5 +40,27 @@
     color     : $color;
     background: $background;
     border    : $border;
+  }
+}
+
+@mixin alt-style ($background,
+  $border,
+  $color,
+  $hover-background:lighten($background, 7.5%),
+  $hover-border:lighten($border, 10%),
+  $hover-color:$color,
+) {
+  color     : $color;
+  background: $background;
+
+  &:hover {
+    color     : $hover-color;
+    background: $hover-background;
+  }
+
+  &:focus,
+  &.focus {
+    color : $hover-color;
+    border: $hover-border;
   }
 }

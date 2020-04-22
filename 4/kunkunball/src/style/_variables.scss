@@ -232,6 +232,21 @@ background-color .15s ease-in-out,
 border-color .15s ease-in-out,
 box-shadow .15s ease-in-out !default;
 
+// 弹出框 alt
+$alt-border-width:$border-width !default;
+$alt-box-shadow  : inset 0 1px 0 rgba($white, .15),
+0 1px 1px rgba($black, .075) !default;
+$alt-transition: color .15s ease-in-out,
+background-color .15s ease-in-out,
+border-color .15s ease-in-out,
+box-shadow .15s ease-in-out !default;
+$alt-border-radius    : $border-radius !default;
+$alt-border-radius-no : $border-radius-lg !default;
+$alt-border-radius-spe: $border-radius-sm !default;
+$width-spe            :25rem !default;
+$width-no             :25rem !default;
+$height-spe           :10rem !default;
+$height-no            :5rem !default;
 // menu
 $menu-border-width: $border-width !default;
 $menu-border-color: $border-color !default;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
-import Alert, { alertType } from './components/Alert/alert'
+import Alert, { alertType, altSty } from './components/Alert/alert'
 const App: React.FC = () => {
 
   return (
@@ -19,7 +19,7 @@ const App: React.FC = () => {
       <p>ALER START</p>
       <header className='App-header'>
 
-        <Alert altType={alertType.Defult}>alert defult</Alert>
+        <Alert altType={alertType.Danger} altStyle={altSty.no} title={'this is title'}>danger</Alert>
         <Alert altType={alertType.Danger}>alert danger</Alert>
         <Alert altType={alertType.Success}>alert success</Alert>
         <Alert altType={alertType.Warning}>alert warn</Alert>
