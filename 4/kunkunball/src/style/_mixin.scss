@@ -1,15 +1,14 @@
 @mixin button-size ($padding-x, $padding-y, $font-size, $border-raduis) {
-  padding      : $padding-y, $padding-x;
+  padding      : $padding-x, $padding-y;
   font-size    : $font-size;
   border-raduis: $border-raduis;
 }
 
-@mixin alt-size ($padding-x, $padding-y, $font-size, $border-raduis, $width, $height) {
-  padding      : $padding-y, $padding-x;
-  width        : $width;
-  height       : $height;
-  font-size    : $font-size;
-  border-raduis: $border-raduis;
+@mixin alt-size ($padding-x, $padding-y, $font-size, $width, $height) {
+  padding  : $padding-x, $padding-y, $padding-y, $padding-x;
+  font-size: $font-size;
+  width    : $width;
+  height   : $height;
 }
 
 @mixin button-style ($background,
@@ -46,21 +45,9 @@
 @mixin alt-style ($background,
   $border,
   $color,
-  $hover-background:lighten($background, 7.5%),
-  $hover-border:lighten($border, 10%),
-  $hover-color:$color,
 ) {
   color     : $color;
   background: $background;
+  border    : $border;
 
-  &:hover {
-    color     : $hover-color;
-    background: $hover-background;
-  }
-
-  &:focus,
-  &.focus {
-    color : $hover-color;
-    border: $hover-border;
-  }
 }

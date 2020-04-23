@@ -240,13 +240,15 @@ $alt-transition: color .15s ease-in-out,
 background-color .15s ease-in-out,
 border-color .15s ease-in-out,
 box-shadow .15s ease-in-out !default;
-$alt-border-radius    : $border-radius !default;
-$alt-border-radius-no : $border-radius-lg !default;
-$alt-border-radius-spe: $border-radius-sm !default;
-$width-spe            :25rem !default;
-$width-no             :25rem !default;
-$height-spe           :10rem !default;
-$height-no            :5rem !default;
+$alt-border-radius : $border-radius !default;
+$alt-font-size     :$font-size-base !default;
+$width-spe         :20rem !default;
+$width-no          :20rem !default;
+$height-spe        :6rem !default;
+$height-no         :3rem !default;
+$alt-padding-x     :0.75rem !default;
+$alt-padding-y     :1.25rem !default;
+
 // menu
 $menu-border-width: $border-width !default;
 $menu-border-color: $border-color !default;

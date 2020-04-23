@@ -19,8 +19,8 @@ const App: React.FC = () => {
       <p>ALER START</p>
       <header className='App-header'>
 
-        <Alert altType={alertType.Danger} altStyle={altSty.no} title={'this is title'}>danger</Alert>
-        <Alert altType={alertType.Danger}>alert danger</Alert>
+        <Alert altType={alertType.Danger} title={'this is title'}>danger</Alert>
+        <Alert altType={alertType.Success} altStyle={altSty.spe} title={"this is title"}>alert danger spe</Alert>
         <Alert altType={alertType.Success}>alert success</Alert>
         <Alert altType={alertType.Warning}>alert warn</Alert>
       </header>

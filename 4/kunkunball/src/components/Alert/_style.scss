@@ -1,32 +1,27 @@
 .alt {
   position        : relative;
   display         : inline-block;
-  font-weight     : $btn-font-weight;
-  line-height     : $btn-line-height;
   color           : $body-color;
   white-space     : nowrap;
-  text-align      : center;
-  vertical-align  : middle;
   background-image: none;
   border          : $alt-border-width solid transparent;
-  box-shadow      : $alt-box-shadow;
-  cursor          : pointer;
-  transition      : $alt-transition;
-
+  @include alt-size ($alt-padding-x, $alt-padding-y, $alt-font-size, $width-no, $height-no);
+  border-radius: $alt-border-radius;
+  margin-bottom: 1rem;
 }
 
 .alt-spe {
-  @include alt-size ($btn-padding-x-lg, $btn-padding-y-lg, $btn-font-size-lg, $btn-border-radius-lg, $width-spe, $height-spe);
+  @include alt-size ($alt-padding-x, $alt-padding-y, $alt-font-size, $width-spe, $height-spe);
 }
 
 .alt-no {
-  @include alt-size ($btn-padding-x-sm, $btn-padding-y-sm, $btn-font-size-sm, $btn-border-radius-sm, $width-no, $height-no);
+  @include alt-size ($alt-padding-x, $alt-padding-y, $alt-font-size, $width-no, $height-no);
 }
+
 
 .alt-success {
   @include alt-style($success, $success, $white)
 }
-
 
 .alt-warning {
   @include alt-style($warning, $warning, $white)
@@ -34,4 +29,13 @@
 
 .alt-danger {
   @include alt-style($danger, $danger, $white)
+}
+
+.alt-no-clase-span {
+  position: absolute;
+  top     : 0;
+  right   : 0;
+  padding : 0.75rem 1.25rem;
+  color   : inherit;
+  cursor  : pointer;
 }

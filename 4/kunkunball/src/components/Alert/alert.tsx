@@ -39,20 +39,29 @@ const Alert: React.FC<baseAlertProps> = (props) => {
 
     // altState: (altType !== alertType.Warning) && altState
   })
+
   if (altStyle === 'spe') {
     return (
       <div
-        title={title}
         className={classes}
-      >  {children}
+      >
+        <span
+          className={'alt-spe-span'}
+        >{children}</span>
       </div>
     )
   } else {
     return (
       <div
-        title={title}
         className={classes}
-      >  {children}
+      >
+        <span
+          className={'alt-no-span'}
+        >{children}</span>
+        <span
+        className={'alt-no-clase-span'}>
+          X
+        </span>
       </div>
     )
   }
@@ -67,3 +76,6 @@ Alert.defaultProps = {
 }
 
 export default Alert;
+
+
+
