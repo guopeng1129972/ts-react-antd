@@ -52,6 +52,7 @@ var end = new Date().getTime();
 var duration = end - start
 
 ****************
+npx jest jest.test.js --watch
 ****************
 ****************
 ****************
