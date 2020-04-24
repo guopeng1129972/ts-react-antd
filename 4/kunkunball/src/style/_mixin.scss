@@ -1,11 +1,11 @@
 @mixin button-size ($padding-x, $padding-y, $font-size, $border-raduis) {
-  padding      : $padding-x, $padding-y;
+  padding      : $padding-x $padding-y;
   font-size    : $font-size;
   border-raduis: $border-raduis;
 }
 
 @mixin alt-size ($padding-x, $padding-y, $font-size, $width, $height) {
-  padding  : $padding-x, $padding-y, $padding-y, $padding-x;
+  padding  : $padding-x $padding-y;
   font-size: $font-size;
   width    : $width;
   height   : $height;
