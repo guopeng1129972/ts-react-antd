@@ -52,9 +52,31 @@ var end = new Date().getTime();
 var duration = end - start
 
 ****************
-npx jest jest.test.js --watch
+npx jest jest.test.js --watch 报错
+npm run test 报错
 ****************
+如果是老版本的安装新的esting-librart
+npm install --save-dev @testing-librart/react
+"react-scripts": "3.3.0",
+npm run test
+安装测试小工具jest-dom
+npm install --save-dev @testing-librart/jest-dom
 ****************
+rm -rf .node-gyp/  
+npm install -g node-gyp  
+rm -rf /node_modules 
+
+npm ERR! Maximum call stack size exceeded npm解决方法
+sudo npm install npm -g
+执行过程中会报错
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib/node_modules/npm/node_modules/chownr'
+继续执行
+sudo npm install npm -g
+sudo cnpm install cnpm -g
+最后就成功了
+Error: EMFILE: too many open files, watch
+    at FSEvent.FSWatcher._handle.onchange (internal/fs/watchers.js:123:28)
+这个错误就
 ****************
 ****************
 ****************
