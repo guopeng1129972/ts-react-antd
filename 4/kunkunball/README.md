@@ -61,6 +61,10 @@ npm install --save-dev @testing-librart/react
 npm run test
 安装测试小工具jest-dom
 npm install --save-dev @testing-librart/jest-dom
+react 启动前都会加载一个文件（新版本的构建工具会自带） setupTests.ts
+将需要的包导进去
+import '@testing-library/jest-dom/extend-expect';（默认）
+写测试用例的时候就会有代码提示等
 ****************
 rm -rf .node-gyp/  
 npm install -g node-gyp  
@@ -78,6 +82,9 @@ Error: EMFILE: too many open files, watch
     at FSEvent.FSWatcher._handle.onchange (internal/fs/watchers.js:123:28)
 这个错误就
 ****************
+linux (mac)查看文件大小
+1、（方法一）ls -lht会列出当前目录下每个文件的大小，同时也会给出当前目录下所有文件大小总和
+2、（方法二）du -sh *也会列出当前文件夹下所有文件对应的大小
 ****************
 ****************
 ****************

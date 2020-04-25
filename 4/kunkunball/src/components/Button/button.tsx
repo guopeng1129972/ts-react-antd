@@ -7,7 +7,7 @@ export enum ButtonSize {
 
 export enum ButtonType {
   Primary = 'primary',
-  Defult = 'defult',
+  Defult = 'default',
   Danger = 'danger',
   Link = 'link'
 }

@@ -5,7 +5,7 @@ test('test common matcher', () => {
 })
 
 test('test tobe true or false', () => {
-  expect(2).toBeGreaterThan(1)
+  expect(2).toBeGreaterThan(4)
   expect(2).toBeLessThan(3)
 
 })
