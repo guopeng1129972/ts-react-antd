@@ -1,11 +1,26 @@
 import React from 'react';
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
-import Alert, { alertType, altSty } from './components/Alert/alert'
+import Alert, { alertType, altSty } from './components/Alert/alert';
+import Menu from './components/Menu/menu'
+import MenuItem from './components/Menu/menuItem'
 const App: React.FC = () => {
 
   return (
     <div className="App">
       <header className="App-header">
+        <Menu defaultIndex={0}>
+          <MenuItem>
+            cool link
+          </MenuItem>
+          <MenuItem>
+            cool link1
+          </MenuItem>
+          <MenuItem>
+            cool link2
+          </MenuItem>
+
+        </Menu>
+
         <Button autoFocus>Hello1</Button>
         <Button className='custom' disabled>disable Hello1</Button>
         <Button onClick={(e) => { e.preventDefault(); alert(123) }}>Hello1</Button>
