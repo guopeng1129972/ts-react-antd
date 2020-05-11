@@ -27,7 +27,7 @@ export const MenuContext = createContext<IMenuContext>({ index: 0 })
 const Menu: React.FC<MenuProps> = (props) => {
   const { defaultIndex, classname, mode, style, children, onSelect } = props
   const [currentActive, setActive] = useState(defaultIndex)
-  const classes = classNames('munu', classname, {
+  const classes = classNames('menu', classname, {
     'menu-vertical': mode === 'vertical'
   })
   const handleClick = (index: number) => {
