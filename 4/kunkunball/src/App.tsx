@@ -9,13 +9,13 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <Menu defaultIndex={0} onSelect={index => console.log(index)} mode={"vertical"}>
-          <MenuItem index={0}>
+          <MenuItem >
             cool link
           </MenuItem >
-          <MenuItem index={1} disabled>
+          <MenuItem disabled>
             cool link1
           </MenuItem >
-          <MenuItem index={2}>
+          <MenuItem >
             cool link2
           </MenuItem>
 

@@ -54,7 +54,7 @@ const Menu: React.FC<MenuProps> = (props) => {
   return (
     <ul className={classes} style={style} data-testid="test-menu">
       <MenuContext.Provider value={passedContent}>
-        {renderChildren}
+        {renderChildren()}
       </MenuContext.Provider>
     </ul>
   )
