@@ -18,7 +18,7 @@ const generateMenu = (props: MenuProps) => {
       <MenuItem>
         active
       </MenuItem>
-      <MenuItem>
+      <MenuItem disabled>
         disabled
       </MenuItem>
       <MenuItem>
@@ -44,7 +44,7 @@ describe('test Menu and MenuItem component', () => {
 
   })
   it('click items should change active and call the right callback', () => {
-    const thirdItem = wrapper.getByText('gp');
+    const thirdItem = wrapper.getByText('gp')
     fireEvent.click(thirdItem)
     expect(thirdItem).toHaveClass('is-active')
     expect(testProps.onSelect).toHaveBeenCalledWith(2)
