@@ -25,7 +25,7 @@ const App: React.FC = () => {
             </MenuItem>
           </SubMenu>
           <MenuItem >
-            cool link2
+            cool link3
           </MenuItem>
         </Menu>
 
